@@ -36,29 +36,52 @@
 </script>
 
 <div id="background">
+  <div id="left-circle"></div>
+  <div id="right-circle"></div>
   <div id="floating-notes-container"></div>
 </div>
 
 <style>
-  /* Full screen, no margin */
   #background {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: hidden;
     position: relative;
+    z-index: 1;
   }
 
-  /* Container for the floating music notes */
   #floating-notes-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: calc(100% + 30px);
+    z-index: 2;
   }
 
-  /* Styling for music notes (default, can be overwritten by JS) */
+  #left-circle {
+    position: absolute;
+    top: 0%;
+    left: -50%;
+    width: 150vh;
+    height: 150vh;
+    opacity: .2;
+    background: radial-gradient(circle, rgb(var(--m3-scheme-primary-container)) 0%, transparent 70%);
+    z-index: 1;
+  }
+
+  #right-circle {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    width: 150vh;
+    height: 150vh;
+    opacity: .2;
+    background: radial-gradient(circle, rgb(var(--m3-scheme-primary-container)) 0%, transparent 70%);
+    z-index: 1;
+  }
+
   :global(.music-note) {
     position: absolute;
     font-size: 24px;

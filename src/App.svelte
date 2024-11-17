@@ -1,5 +1,8 @@
 <script lang="ts">
-  import Background from "./components/Background.svelte";
+  import { Background } from "@layout";
+  import { Header } from "@navigation";
+  import Content from "./components/Content.svelte";
+  import Footer from "./components/navigation/Footer.svelte";
 
 </script>
 
@@ -7,8 +10,10 @@
   <div class="background">
     <Background />
   </div>
-  <div class="content">
-    Svunes is Amazing
+  <div class="layout">
+    <Header />
+    <Content />
+    <Footer />
   </div>
 </main>
 
@@ -31,9 +36,10 @@
     z-index: 1;
   }
 
-  .content {
+  .layout {
     z-index: 2;
     
     width: 100%;
+    height: 100%;
   }
 </style>

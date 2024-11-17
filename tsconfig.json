@@ -11,6 +11,13 @@
      * Note that setting allowJs false does not prevent the use
      * of JS in `.svelte` files.
      */
+    "paths": {
+      "@interactables": ["./src/components/interactables"],
+      "@layout": ["./src/components/layout"],
+      "@navigation": ["./src/components/navigation"],
+      "@component-utils": ["./src/components/utils"],
+      "@icons": ["./src/lib/icons"]
+    },
     "allowJs": true,
     "checkJs": true,
     "isolatedModules": true,
