@@ -37,6 +37,7 @@
 
   .type-elevated {
     background-color: rgb(var(--m3-scheme-surface-container-low));
+    border: solid 0.0625rem rgb(var(--m3-scheme-outline) / 0.2);
   }
   .type-filled {
     background-color: rgb(var(--m3-scheme-surface-container-highest));
