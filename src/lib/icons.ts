@@ -105,8 +105,6 @@ export { default as Person } from "@ktibow/iconset-material-symbols/person-round
 
 export { default as HideSource } from "@ktibow/iconset-material-symbols/hide-source-outline-rounded";
 export { default as Imagesmode } from "@ktibow/iconset-material-symbols/imagesmode-outline-rounded";
-export { default as PlayCircle } from "@ktibow/iconset-material-symbols/play-circle-outline-rounded";
-export { default as SwipeDownAlt } from "@ktibow/iconset-material-symbols/swipe-down-alt-rounded";
 
 export { default as Personalize } from "@ktibow/iconset-material-symbols/hdr-weak";
 
