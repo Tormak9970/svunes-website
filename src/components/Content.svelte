@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { CheckList, MusicNote } from "@icons";
+    import { CheckList, ContactSupport, MusicNote } from "@icons";
     import Section from "./Section.svelte";
 
 
@@ -10,22 +10,20 @@
     <div class="logo">
 
     </div>
-    <div class="title">
-
-    </div>
+    <div class="title">Svunes</div>
     <div class="description">
-
+      A robust, offline first music player and tag editor. Built for every platform
     </div>
   </div>
   <div class="sections">
     <Section icon={MusicNote} id="About" title="About">
-      Test
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis fugit dolor accusantium quibusdam magnam explicabo alias culpa laborum nulla vel libero cumque, asperiores vitae rem fuga delectus assumenda unde aspernatur et laboriosam nemo officia iusto necessitatibus? Nisi eius eveniet sint.
     </Section>
     <Section icon={CheckList} id="Features" title="Features">
-      Test
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores excepturi natus officiis quibusdam facere similique culpa commodi doloribus? Beatae, alias eligendi hic explicabo fuga perferendis iusto recusandae illo quas id odio. Perferendis, reprehenderit repellendus. Ex facilis vel dicta nobis maxime.
     </Section>
-    <Section icon={MusicNote} id="FAQ" title="Common Questions">
-      Test
+    <Section icon={ContactSupport} id="FAQ" title="Common Questions">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi deleniti quas esse omnis incidunt velit voluptates commodi molestiae. Porro corrupti soluta autem modi officia velit voluptate repellendus doloribus qui vero! Aperiam, distinctio! Minima ullam sapiente et saepe earum? Voluptatum, ut!
     </Section>
   </div>
 </div>

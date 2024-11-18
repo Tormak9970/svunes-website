@@ -117,5 +117,6 @@ export { default as PictureInPictureExit } from "@ktibow/iconset-material-symbol
 export { default as Speaker } from "@ktibow/iconset-material-symbols/speaker";
 
 export { default as CheckList } from "@ktibow/iconset-material-symbols/checklist-rounded";
+export { default as ContactSupport } from "@ktibow/iconset-material-symbols/contact-support-rounded";
 export { default as Menu } from "@ktibow/iconset-material-symbols/menu-rounded";
 

@@ -44,7 +44,18 @@
   }
 
   .icon {
-    color: rgb(var(--m3-scheme-primary-container));
+    color: rgb(var(--m3-scheme-primary));
+    background-color: rgb(var(--m3-scheme-primary-container));
+
+    border-radius: 4px;
+    border: 1px solid rgb(var(--m3-scheme-primary) / 0.7);
+
+    width: 1.8rem;
+    height: 1.8rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .icon :global(svg) {

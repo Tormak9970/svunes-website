@@ -37,6 +37,7 @@
   }
 
   .layout {
+    position: relative;
     z-index: 2;
     
     width: 100%;
