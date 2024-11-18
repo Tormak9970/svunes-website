@@ -102,7 +102,6 @@ export { default as EditDocument } from "@ktibow/iconset-material-symbols/edit-d
 export { default as InfoOutline } from "@ktibow/iconset-material-symbols/info-outline-rounded";
 export { default as License } from "@ktibow/iconset-material-symbols/license-outline-rounded";
 export { default as Person } from "@ktibow/iconset-material-symbols/person-rounded";
-export { default as Star } from "@ktibow/iconset-material-symbols/star-rounded";
 
 export { default as HideSource } from "@ktibow/iconset-material-symbols/hide-source-outline-rounded";
 export { default as Imagesmode } from "@ktibow/iconset-material-symbols/imagesmode-outline-rounded";
@@ -119,4 +118,5 @@ export { default as Speaker } from "@ktibow/iconset-material-symbols/speaker";
 export { default as CheckList } from "@ktibow/iconset-material-symbols/checklist-rounded";
 export { default as ContactSupport } from "@ktibow/iconset-material-symbols/contact-support-rounded";
 export { default as Menu } from "@ktibow/iconset-material-symbols/menu-rounded";
+export { default as Star } from "@ktibow/iconset-material-symbols/star-rounded";
 

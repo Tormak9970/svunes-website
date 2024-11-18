@@ -1,20 +1,34 @@
 <script lang="ts">
-    import { CheckList, ContactSupport, MusicNote } from "@icons";
-    import Section from "./Section.svelte";
+  import { Icon } from "@component-utils";
+  import { CheckList, ContactSupport, MusicNote, Star } from "@icons";
+  import { Button } from "@interactables";
+  import { goToDownload, goToGitHub } from "@site-navigation";
+  import Section from "./Section.svelte";
 
+  let starCount = 12;
 
+  async function getRepoData() {
+    fetch("https://api.github.com/repos/Tormak9970/Svunes").then(async (res) => {
+      const data = await res.json();
+      starCount = data.stargazers_count;
+    });
+  }
+
+  getRepoData();
 </script>
 
 <div id="content">
   <div class="title-field">
-    <div class="logo">
-
-    </div>
+    <img src="/logo.svg" alt="Svunes Logo">
     <div class="title">Svunes</div>
-    <div class="description">
-      A robust, offline first music player and tag editor. Built for every platform
+    <div>A robust, offline first music player and tag editor</div>
+    <Button type="tonal" on:click={goToDownload}>Download</Button>
+    <div class="stats">
+      <Button type="text" iconType="left" on:click={goToGitHub}>
+        <Icon icon={Star} />
+        {starCount}
+      </Button>
     </div>
-    <!-- TODO: number of stars | number of downloads -->
   </div>
   <div class="sections">
     <Section icon={MusicNote} id="About" title="About">
@@ -31,13 +45,33 @@
 
 <style>
   #content {
-    padding-top: 4rem;
-
     width: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .title-field {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .title-field img {
+    max-width: 12rem;
+  }
+  
+  .title {
+    font-size: 2.15rem;
+    font-weight: bold;
   }
 
   .sections {
@@ -48,5 +82,7 @@
     align-items: center;
 
     gap: 1rem;
+
+    padding-bottom: 1rem;
   }
 </style>

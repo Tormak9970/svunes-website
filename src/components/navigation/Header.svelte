@@ -43,10 +43,10 @@
   #header {
     backdrop-filter: blur(16px);
 
-    position: absolute;
-    top: 0;
+    background-color: rgb(var(--m3-scheme-background) / 0.5);
 
-    z-index: 3;
+    position: sticky;
+    top: 0;
 
     width: 100%;
 
@@ -67,11 +67,11 @@
   }
 
   .logo-container img {
-    height: 2.8rem;
+    height: 2.15rem;
   }
 
   .logo-container .title {
-    font-size: 2.15rem;
+    font-size: 1.6rem;
     font-weight: bold;
   }
 

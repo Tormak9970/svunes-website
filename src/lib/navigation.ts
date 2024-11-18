@@ -14,3 +14,7 @@ export function goToFAQ() {
 export function goToGitHub() {
   
 }
+
+export function goToDownload() {
+  
+}
