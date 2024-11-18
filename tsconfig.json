@@ -16,7 +16,10 @@
       "@layout": ["./src/components/layout"],
       "@navigation": ["./src/components/navigation"],
       "@component-utils": ["./src/components/utils"],
-      "@icons": ["./src/lib/icons"]
+      "@stores": ["./src/Stores"],
+      "@site-navigation": ["./src/lib/navigation"],
+      "@icons": ["./src/lib/icons"],
+      "@utils": ["./src/lib/utils"]
     },
     "allowJs": true,
     "checkJs": true,

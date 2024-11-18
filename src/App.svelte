@@ -1,8 +1,10 @@
 <script lang="ts">
   import { Background } from "@layout";
   import { Header } from "@navigation";
+  import { showSidebar } from "@stores";
   import Content from "./components/Content.svelte";
   import Footer from "./components/navigation/Footer.svelte";
+  import Sidebar from "./components/navigation/Sidebar.svelte";
 
 </script>
 
@@ -12,6 +14,9 @@
   </div>
   <div class="layout">
     <Header />
+    {#if $showSidebar}
+      <Sidebar />
+    {/if}
     <Content />
     <Footer />
   </div>

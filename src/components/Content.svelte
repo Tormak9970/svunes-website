@@ -14,6 +14,7 @@
     <div class="description">
       A robust, offline first music player and tag editor. Built for every platform
     </div>
+    <!-- TODO: number of stars | number of downloads -->
   </div>
   <div class="sections">
     <Section icon={MusicNote} id="About" title="About">

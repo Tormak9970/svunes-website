@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import sveltePreprocess from "svelte-preprocess";
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { resolve } from "path";
+import sveltePreprocess from "svelte-preprocess";
+import { defineConfig } from 'vite';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -21,7 +21,10 @@ export default defineConfig({
       "@layout": resolve(__dirname, "./src/components/layout"),
       "@navigation": resolve(__dirname, "./src/components/navigation"),
       "@component-utils": resolve(__dirname, "./src/components/utils"),
-      "@icons": resolve(__dirname, "./src/lib/icons")
+      "@stores": resolve(__dirname, "./src/Stores"),
+      "@site-navigation": resolve(__dirname, "./src/lib/navigation"),
+      "@icons": resolve(__dirname, "./src/lib/icons"),
+      "@utils": resolve(__dirname, "./src/lib/utils"),
     }
   },
 })
