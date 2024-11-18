@@ -55,6 +55,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    z-index: 2;
   }
 
   .logo-container {
