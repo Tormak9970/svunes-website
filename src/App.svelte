@@ -49,5 +49,9 @@
     height: 100%;
 
     overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 </style>

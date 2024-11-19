@@ -18,7 +18,7 @@
     notesData[index] = [
       Math.floor(Math.random() * MUSIC_NOTES.length),
       startTime,
-      2 + Math.random() * (canvas.width - 4),
+      2 + Math.random() * (canvas.width - 14),
       Math.random() * 5 + 5
     ];
   }
