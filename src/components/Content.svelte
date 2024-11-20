@@ -1,13 +1,13 @@
 <script lang="ts">
   import { Icon } from "@component-utils";
-  import { Bug, CheckList, ContactSupport, MusicNote, Palette, Star } from "@icons";
+  import { Bedtime, BrightnessMedium, Bug, CheckList, ContactSupport, DarkMode, DashboardEdit, DirectionsCar, Edit, EditDocument, ExitToApp, Favorite, FolderOpen, Groups, History, Home, Imagesmode, LibraryMusic, MusicNote, Palette, PictureInPicture, PlayCircle, QueueMusic, Search, Star, TextRotationNone, TravelExplore, TrendingUp, Tune } from "@icons";
   import { Button } from "@interactables";
   import { goToDownload, goToGitHub } from "@site-navigation";
   import { openInNewTab } from "@utils";
   import Section from "./Section.svelte";
+  import SectionListEntry from "./SectionListEntry.svelte";
 
   const BUG_REPORT_URL = "https://github.com/Tormak9970/Svunes/issues/new?assignees=Tormak9970&labels=bug&projects=&template=bug_report.md&title=";
-  const FEATURE_REQUEST_URL = "https://github.com/Tormak9970/Svunes/issues/new?assignees=Tormak9970&labels=enhancement&projects=&template=feature_request.md&title=";
 
   let starCount = 12;
 
@@ -46,10 +46,37 @@
       </span>
     </Section>
     <Section icon={CheckList} id="Features" title="Features">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores excepturi natus officiis quibusdam facere similique culpa commodi doloribus? Beatae, alias eligendi hic explicabo fuga perferendis iusto recusandae illo quas id odio. Perferendis, reprehenderit repellendus. Ex facilis vel dicta nobis maxime.
+      <div class="section-list">
+        <SectionListEntry icon={Home}>Custom Home Page</SectionListEntry>
+        <SectionListEntry icon={QueueMusic}>User Playlists</SectionListEntry>
+        <SectionListEntry icon={ExitToApp}>Import / Export Playlists</SectionListEntry>
+        <SectionListEntry icon={Favorite}>Favorites</SectionListEntry>
+        <SectionListEntry icon={History}>History, Most Played, Recently Added</SectionListEntry>
+        <SectionListEntry icon={TrendingUp}>Top Artists / Albums</SectionListEntry>
+        <SectionListEntry icon={LibraryMusic}>Browse Albums, Artists, Songs, Genres</SectionListEntry>
+        <SectionListEntry icon={Search}>Full Library Search</SectionListEntry>
+        <SectionListEntry icon={DashboardEdit}>Custom Library Layouts / Sorting</SectionListEntry>
+        <SectionListEntry icon={PlayCircle}>Now Playing Themes</SectionListEntry>
+        <SectionListEntry icon={PictureInPicture}>Popout Player</SectionListEntry>
+        <SectionListEntry icon={Edit}>Song / Album Tag Editing</SectionListEntry>
+        <SectionListEntry icon={EditDocument}>Bulk Tag Editing</SectionListEntry>
+        <SectionListEntry icon={TravelExplore}>Song / Album Metadata Lookup</SectionListEntry>
+        <SectionListEntry icon={Imagesmode}>Cover Art Lookup</SectionListEntry>
+        <SectionListEntry icon={TextRotationNone}>Filename Metadata Parsing</SectionListEntry>
+        <SectionListEntry icon={FolderOpen}>Whitelist / Blacklist Folders</SectionListEntry>
+        <SectionListEntry icon={Tune}>Filters Music by Length</SectionListEntry>
+        <SectionListEntry icon={DirectionsCar}>Driving Mode</SectionListEntry>
+        <SectionListEntry icon={Bedtime}>Sleep Timer</SectionListEntry>
+      </div>
     </Section>
     <Section icon={Palette} title="Personalization Options">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores excepturi natus officiis quibusdam facere similique culpa commodi doloribus? Beatae, alias eligendi hic explicabo fuga perferendis iusto recusandae illo quas id odio. Perferendis, reprehenderit repellendus. Ex facilis vel dicta nobis maxime.
+      <div class="section-list">
+        <SectionListEntry icon={Palette}>Full Dynamic Theming</SectionListEntry>
+        <SectionListEntry icon={BrightnessMedium}>Light / Dark Mode</SectionListEntry>
+        <SectionListEntry icon={DarkMode}>OLED Dark Theme</SectionListEntry>
+        <SectionListEntry icon={LibraryMusic}>Custom Library Categories</SectionListEntry>
+        <SectionListEntry icon={Groups}>User Profiles</SectionListEntry>
+      </div>
     </Section>
     <Section icon={ContactSupport} id="FAQ" title="Common Questions">
       <div class="question">Are metrics reported / tracked?</div>
@@ -104,6 +131,14 @@
     gap: 1rem;
 
     padding-bottom: 1rem;
+  }
+
+  .section-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   a {
