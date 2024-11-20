@@ -3,7 +3,7 @@
   export let display = "inline-flex";
   export let extraOptions: HTMLButtonAttributes = {};
   export let iconType: "none" | "left" | "full" = "none";
-  export let type: "elevated" | "filled" | "tonal" | "outlined" | "text";
+  export let type: "elevated" | "filled" | "tonal" | "outlined" | "text" | "tertiary";
   export let size = "2.5rem";
   export let iconSize = "1.5rem";
   export let disabled = false;
@@ -103,6 +103,11 @@
   .m3-container:enabled.outlined {
     border: 0.0625rem solid rgb(var(--m3-scheme-outline));
     --text-color: var(--m3-scheme-primary);
+  }
+
+  .m3-container:enabled.tertiary {
+    background-color: rgb(var(--m3-scheme-tertiary-container));
+    --text-color: var(--m3-scheme-on-tertiary-container);
   }
 
   .m3-container.text {

@@ -19,6 +19,11 @@
     <div class="section-body">
       <slot />
     </div>
+    {#if $$slots.actions}
+      <div class="actions">
+        <slot name="actions" />
+      </div>
+    {/if}
   </Card>
 </div>
 
@@ -61,6 +66,16 @@
   .icon :global(svg) {
     width: 1.25rem;
     height: 1.25rem;
+  }
+
+  .actions {
+    margin-top: 0.5rem;
+  }
+
+  .actions :global(span) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .headline {

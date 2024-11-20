@@ -1,27 +1,26 @@
-export { default as GridView } from "@ktibow/iconset-material-symbols/grid-view";
+export { default as MusicNote } from "@ktibow/iconset-material-symbols/music-note-rounded";
 export { default as Settings } from "@ktibow/iconset-material-symbols/settings";
 
-export { default as MusicNote } from "@ktibow/iconset-material-symbols/music-note-rounded";
+export { default as CheckList } from "@ktibow/iconset-material-symbols/checklist-rounded";
+export { default as ContactSupport } from "@ktibow/iconset-material-symbols/contact-support-rounded";
+export { default as Lightbulb } from "@ktibow/iconset-material-symbols/lightbulb-rounded";
+export { default as Menu } from "@ktibow/iconset-material-symbols/menu-rounded";
+export { default as Star } from "@ktibow/iconset-material-symbols/star-rounded";
 
 export { default as Close } from "@ktibow/iconset-material-symbols/close-rounded";
+
+// TODO: icons below need checking for usage
+
 export { default as FavoriteOff } from "@ktibow/iconset-material-symbols/favorite-outline-rounded";
 export { default as FavoriteOn } from "@ktibow/iconset-material-symbols/favorite-rounded";
 export { default as Pause } from "@ktibow/iconset-material-symbols/pause-rounded";
 export { default as Play } from "@ktibow/iconset-material-symbols/play-arrow-rounded";
 export { default as Repeat } from "@ktibow/iconset-material-symbols/repeat-rounded";
 export { default as Shuffle } from "@ktibow/iconset-material-symbols/shuffle-rounded";
-export { default as SkipNext } from "@ktibow/iconset-material-symbols/skip-next-rounded";
-export { default as SkipPrevious } from "@ktibow/iconset-material-symbols/skip-previous-rounded";
 
 export { default as KeyboardArrowDown } from "@ktibow/iconset-material-symbols/keyboard-arrow-down-rounded";
 export { default as MoreVert } from "@ktibow/iconset-material-symbols/more-vert";
 export { default as QueueMusic } from "@ktibow/iconset-material-symbols/queue-music-rounded";
-
-export { default as BackArrow } from "@ktibow/iconset-material-symbols/arrow-back-rounded";
-export { default as ArrowDropDown } from "@ktibow/iconset-material-symbols/arrow-drop-down-rounded";
-export { default as ArrowDropUp } from "@ktibow/iconset-material-symbols/arrow-drop-up-rounded";
-export { default as ForwardArrow } from "@ktibow/iconset-material-symbols/arrow-forward-rounded";
-export { default as SubdirectoryArrowRight } from "@ktibow/iconset-material-symbols/subdirectory-arrow-right-rounded";
 
 export { default as VolumeDown } from "@ktibow/iconset-material-symbols/volume-down-rounded";
 export { default as VolumeOff } from "@ktibow/iconset-material-symbols/volume-off-rounded";
@@ -47,11 +46,8 @@ export { default as GraphEq } from "@ktibow/iconset-material-symbols/graphic-eq-
 export { default as HardDrive2 } from "@ktibow/iconset-material-symbols/hard-drive-2";
 export { default as Schedule } from "@ktibow/iconset-material-symbols/schedule-rounded";
 export { default as Sell } from "@ktibow/iconset-material-symbols/sell";
-export { default as Tag } from "@ktibow/iconset-material-symbols/tag-rounded";
 export { default as Today } from "@ktibow/iconset-material-symbols/today-rounded";
 
-export { default as DragHandle } from "@ktibow/iconset-material-symbols/drag-handle-rounded";
-export { default as DragIndicator } from "@ktibow/iconset-material-symbols/drag-indicator";
 export { default as Edit } from "@ktibow/iconset-material-symbols/edit-outline-rounded";
 
 export { default as AddToQueue } from "@ktibow/iconset-material-symbols/add-to-queue-outline-rounded";
@@ -96,7 +92,6 @@ export { default as DarkMode } from "@ktibow/iconset-material-symbols/dark-mode-
 export { default as LightMode } from "@ktibow/iconset-material-symbols/light-mode-rounded";
 export { default as Palette } from "@ktibow/iconset-material-symbols/palette";
 
-export { default as BugReport } from "@ktibow/iconset-material-symbols/bug-report-outline-rounded";
 export { default as Bug } from "@ktibow/iconset-material-symbols/bug-report-rounded";
 export { default as EditDocument } from "@ktibow/iconset-material-symbols/edit-document-rounded";
 export { default as InfoOutline } from "@ktibow/iconset-material-symbols/info-outline-rounded";
@@ -112,9 +107,4 @@ export { default as PictureInPictureAlt } from "@ktibow/iconset-material-symbols
 export { default as PictureInPicture } from "@ktibow/iconset-material-symbols/pip";
 export { default as PictureInPictureExit } from "@ktibow/iconset-material-symbols/pip-exit";
 export { default as Speaker } from "@ktibow/iconset-material-symbols/speaker";
-
-export { default as CheckList } from "@ktibow/iconset-material-symbols/checklist-rounded";
-export { default as ContactSupport } from "@ktibow/iconset-material-symbols/contact-support-rounded";
-export { default as Menu } from "@ktibow/iconset-material-symbols/menu-rounded";
-export { default as Star } from "@ktibow/iconset-material-symbols/star-rounded";
 

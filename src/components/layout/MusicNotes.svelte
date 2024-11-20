@@ -18,8 +18,8 @@
     notesData[index] = [
       Math.floor(Math.random() * MUSIC_NOTES.length),
       startTime,
-      2 + Math.random() * (canvas.width - 14),
-      Math.random() * 5 + 5
+      Math.random(),
+      (Math.random() * 5 + 5) * 1000
     ];
   }
 
@@ -56,20 +56,20 @@
       
       if (time >= startTime) {
         let timeElapsed = time - startTime;
-        let duration = data[3] * 1000;
+        let duration = data[3];
         
         if (timeElapsed > startTime + duration) {
           setNoteData(i, time);
-          console.log("reset note:", i);
           startTime = time;
           timeElapsed = 0;
-          duration = data[3] * 1000;
+          duration = data[3];
         }
 
-
+        // * 5 from the left, 24 for the note width, 5 from the right
+        const x = (canvas.width - 34) * data[2] + 5
         const y = mapRange(timeElapsed, startTime, startTime + duration, 0, distance);
 
-        drawMusicNote(data[2], distance - y, data[0]);
+        drawMusicNote(x, distance - y, data[0]);
       }
     }
   }
