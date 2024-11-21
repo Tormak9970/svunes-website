@@ -18,6 +18,7 @@
       "@component-utils": ["./src/components/utils"],
       "@stores": ["./src/Stores"],
       "@site-navigation": ["./src/lib/navigation"],
+      "@platforms": ["./src/lib/platforms"],
       "@icons": ["./src/lib/icons"],
       "@utils": ["./src/lib/utils"]
     },

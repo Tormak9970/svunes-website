@@ -23,6 +23,7 @@ export default defineConfig({
       "@component-utils": resolve(__dirname, "./src/components/utils"),
       "@stores": resolve(__dirname, "./src/Stores"),
       "@site-navigation": resolve(__dirname, "./src/lib/navigation"),
+      "@platforms": resolve(__dirname, "./src/lib/platforms"),
       "@icons": resolve(__dirname, "./src/lib/icons"),
       "@utils": resolve(__dirname, "./src/lib/utils"),
     }

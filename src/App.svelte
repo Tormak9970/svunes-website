@@ -3,6 +3,7 @@
   import { Header } from "@navigation";
   import { showSidebar } from "@stores";
   import Content from "./components/Content.svelte";
+  import Modals from "./components/modals/Modals.svelte";
   import Footer from "./components/navigation/Footer.svelte";
   import Sidebar from "./components/navigation/Sidebar.svelte";
 
@@ -12,7 +13,7 @@
   <div class="background">
     <Background />
   </div>
-  <div class="layout">
+  <div id="layout" class="layout">
     <Header />
     {#if $showSidebar}
       <Sidebar />
@@ -20,6 +21,7 @@
     <Content />
     <Footer />
   </div>
+  <Modals />
 </main>
 
 <style>

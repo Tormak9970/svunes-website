@@ -141,21 +141,6 @@
     gap: 0.5rem;
   }
 
-  a {
-    color: rgb(var(--m3-scheme-primary));
-  }
-
-  a:hover,
-  a:visited {
-    color: rgb(var(--m3-scheme-primary));
-    text-decoration: underline;
-  }
-
-  a:focus {
-    color: rgb(var(--m3-scheme-primary) / 0.8);
-    text-decoration: underline;
-  }
-
   .question {
     font-weight: bold;
     font-size: 1.15rem;
