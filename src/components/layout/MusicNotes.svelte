@@ -1,11 +1,14 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { afterUpdate, onMount } from "svelte";
 
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
 
   const MAX_NOTES = 50;
-  const MUSIC_NOTES = [ "🎵", "🎶" ];
+  const MUSIC_NOTES = [
+    new Path2D("M83.5 6.49998C83.5 12 83.5 18.4182 83.5 23.9183C83.5 29.4183 79.5 30.4183 76 31.4183L47.25 42V97.3129C47.25 108.189 36.668 116.998 23.625 116.998C10.582 116.998 0 108.189 0 97.3129C0 86.4367 10.582 77.6275 23.625 77.6275C26.3813 77.6275 29.0391 78.0212 31.5 78.7594V40.2253V22.5085C31.5 19.0389 33.7887 15.9631 37.1109 14.9542L76 0.999973C79.5 -5.53727e-05 83.5 0.999982 83.5 6.49998Z"),
+    new Path2D("M122.825 1.56352C124.819 3.03992 126 5.40217 126 7.88746V25.6043V90.5662C126 101.442 115.418 110.252 102.375 110.252C89.332 110.252 78.75 101.442 78.75 90.5662C78.75 79.69 89.332 70.8808 102.375 70.8808C105.131 70.8808 107.789 71.2745 110.25 72.0127V36.1853L47.25 55.0833V106.315C47.25 117.191 36.668 126 23.625 126C10.582 126 0 117.191 0 106.315C0 95.4384 10.582 86.6292 23.625 86.6292C26.3813 86.6292 29.0391 87.0229 31.5 87.7611V49.2268V31.51C31.5 28.0404 33.7887 24.9646 37.1109 23.9557L115.861 0.333177C118.248 -0.38042 120.832 0.0625023 122.825 1.56352Z")
+  ];
 
   /**
    * A matrix in the form of:
@@ -39,11 +42,16 @@
   }
 
   function drawMusicNote(x: number, y: number, noteIndex: number) {
+    const scale = noteIndex === 0 ? 0.19 : 0.20;
     ctx.fillStyle = "currentcolor";
-    ctx.font = '24px serif'
-    ctx.textAlign = "center"; 
-    ctx.textBaseline = "middle";
-    ctx.fillText(MUSIC_NOTES[noteIndex], x, y);
+    
+    ctx.save();
+
+    ctx.translate(x, y);
+    ctx.scale(scale, scale);
+    ctx.fill(MUSIC_NOTES[noteIndex]);
+
+    ctx.restore();
   }
 
   function drawNotes(time: number) {
@@ -92,6 +100,10 @@
     }
 
     animate(0);
+  });
+
+  afterUpdate(() => {
+    updateCanvas();
   });
 </script>
 
