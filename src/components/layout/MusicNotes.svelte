@@ -43,7 +43,7 @@
 
   function drawMusicNote(x: number, y: number, noteIndex: number) {
     const scale = noteIndex === 0 ? 0.19 : 0.20;
-    ctx.fillStyle = "currentcolor";
+    ctx.fillStyle = "rgb(87 58 112 / 0.4)";
     
     ctx.save();
 
@@ -122,8 +122,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    color: rgb(var(--m3-scheme-primary-container) / 0.4);
 
     background-color: rgb(var(--m3-scheme-background));
   }
