@@ -1,5 +1,10 @@
 <script lang="ts">
+  import { MediaQuery } from "@component-utils";
   import { afterUpdate, onMount } from "svelte";
+
+  let usingDarkMode: boolean;
+
+  $: noteFillColor = usingDarkMode ? "rgb(87 58 112 / 0.4)" : "rgb(242 218 255 / 0.4)";
 
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
@@ -43,7 +48,7 @@
 
   function drawMusicNote(x: number, y: number, noteIndex: number) {
     const scale = noteIndex === 0 ? 0.19 : 0.20;
-    ctx.fillStyle = "rgb(87 58 112 / 0.4)";
+    ctx.fillStyle = noteFillColor;
     
     ctx.save();
 
@@ -108,6 +113,8 @@
 </script>
 
 <svelte:window on:resize={updateCanvas} />
+
+<MediaQuery query="(prefers-color-scheme: dark)" bind:matches={usingDarkMode} />
 
 <div class="music-notes">
   <canvas bind:this="{canvas}" />

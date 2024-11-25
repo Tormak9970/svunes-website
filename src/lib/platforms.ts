@@ -15,16 +15,16 @@ export const UNSUPPORTED_PLATFORMS = [Platform.CHROMEOS, Platform.UNKOWN];
 export function getUserPlatform(): Platform {
   const userAgent = navigator.userAgent;
 
-  if (userAgent.includes("Windows NT")) {
-    return Platform.WINDOWS;
+  if (userAgent.includes("iPhone") || userAgent.includes("iPad") || userAgent.includes("iPod")) {
+    return Platform.IOS;
   } else if (userAgent.includes("Macintosh") || userAgent.includes("Mac OS X")) {
     return Platform.MACOS;
-  } else if (userAgent.includes("Linux") || userAgent.includes("X11")) {
-    return Platform.LINUX;
-  } else if (userAgent.includes("iPhone") || userAgent.includes("iPad") || userAgent.includes("iPod")) {
-    return Platform.IOS;
   } else if (userAgent.includes("Android")) {
     return Platform.ANDROID;
+  } else if (userAgent.includes("Windows NT")) {
+    return Platform.WINDOWS;
+  } else if (userAgent.includes("Linux") || userAgent.includes("X11")) {
+    return Platform.LINUX;
   } else if (userAgent.includes("CrOS")) {
     return Platform.CHROMEOS;
   } else {
